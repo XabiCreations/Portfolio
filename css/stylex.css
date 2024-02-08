@@ -1,0 +1,1530 @@
+@charset "utf-8";
+/*
+/*	Copyright (c) 2022 CoddyThemes
+/*	Author: CoddyThemes
+/*	This file is made for CURRENT TEMPLATE
+
+
+
+TABLE OF CONTENTS
+
+01. AMOS BASE
+02. AMOS AMOS
+03. AMOS RIGHTPART
+04. AMOS ABOUT
+05. AMOS SERVICES
+06. AMOS VIDEO PRESENTATION 
+07. AMOS PORTFOLIO
+08. AMOS SKILLS
+09. AMOS NEWS
+10. AMOS PARTNERS
+11. AMOS CONTACT
+12. AMOS FOOTER
+13. AMOS GLITCH DEMO
+14. AMOS WATER DEMO
+15. AMOS PARTICLE DEMO
+16. AMOS VIDEO DEMO
+17. AMOS RTL DEMO
+18. AMOS MEDIA QUERIES (FOR SMALL DEVIVES)
+
+		
+	
+/*---------------------------------------------------*/
+/*	 01. AMOS BASE
+/*---------------------------------------------------*/
+
+html {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px
+}
+body{
+	font-family: "Roboto";
+	font-size: 16px;
+	line-height: 2;
+	letter-spacing: 0.8px;
+	word-wrap: break-word;
+	font-weight: 400;
+	background-color: #fff;
+	color: #6f6f6f;
+}
+svg{
+	fill: currentcolor;
+	width: 15px;
+	height: 15px;
+}
+img.svg{
+	width: 15px;
+	height: 15px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #6f6f6f;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #6f6f6f;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #6f6f6f;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #6f6f6f;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #6f6f6f;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color: #6f6f6f;
+}
+
+.amos_tm_sticky_section{
+	position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+	overflow: visible;
+	top: 150px;
+}
+.amos_tm_sticky_section:after{
+	clear: both;
+	display: table;
+	content: '';
+}
+.amos_tm_all_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.amos_tm_all_wrap,
+.amos_tm_all_wrap *{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.amos_tm_all_wrap .wrapper_inner{
+	width: 100%;
+	min-height: 100vh;
+	clear: both;
+	float: left;
+}
+.amos_tm_section{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.amos_tm_preloader{
+  position: fixed;
+  background-color: #fff;
+  z-index: 9999999;
+  height: 100%;
+  width: 100%;
+	
+  -webkit-transition: .2s all ease;
+  -o-transition: .2s all ease;
+  transition: .2s all ease;
+  -webkit-transition-delay: .5s;
+  -o-transition-delay: .5s;
+  transition-delay: .5s; }  
+.amos_tm_preloader .spinner_wrap{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 33333;
+}
+.amos_tm_preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+.amos_tm_preloader:before,
+.amos_tm_preloader:after{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: #000;
+	
+    -webkit-transition: .7s all ease;
+    -o-transition: .7s all ease;
+    transition: .7s all ease;
+}
+.amos_tm_preloader:before{
+    top: 0;
+    left: 0; 
+}
+.amos_tm_preloader:after{
+    bottom: 0;
+	left: 0; 
+}
+.amos_tm_preloader.loaded:before, 
+.amos_tm_preloader.loaded:after{height: 0%;}
+
+.amos_tm_mobile_menu{
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: none;
+	z-index: 10;
+}
+.amos_tm_mobile_menu .my_trigger{
+	line-height: 1;
+	position: relative;
+	right: -10px; 
+}
+.amos_tm_mobile_menu .mobile_menu_inner{
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: both;
+	background-color: #fff;
+	padding: 15px 0px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+}
+.amos_tm_mobile_menu .mobile_in{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.amos_tm_mobile_menu .mobile_in .logo img{
+	max-width: 100px;
+}
+.my_trigger .hamburger-box{
+	display: block;
+}
+.my_trigger .hamburger{
+	padding: 0px;
+}
+.amos_tm_mobile_menu .dropdown{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+	display: none;
+}
+.amos_tm_mobile_menu .dropdown .dropdown_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 25px 0px;
+}
+.amos_tm_mobile_menu .dropdown .dropdown_inner ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.amos_tm_mobile_menu .dropdown .dropdown_inner ul li{
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+.amos_tm_mobile_menu .dropdown .dropdown_inner ul li a{
+	text-decoration: none;
+	color: #000;
+	display: inline-block;
+	padding: 2px 0px;
+	font-weight: 500;
+}
+
+/*---------------------------------------------------*/
+/*	 02. AMOS LEFTPART
+/*---------------------------------------------------*/
+
+.amos_tm_leftpart{
+	width: 400px;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.15);
+}
+.amos_tm_leftpart .leftpart_inner{
+	width: 100%;
+    height: 100%;
+    clear: both;
+    float: left;
+    padding: 60px;
+}
+.amos_tm_leftpart .leftpart_inner .logo{float: left;}
+.amos_tm_leftpart .leftpart_inner .logo img{
+	max-width: 200px;
+	max-height: 200px;
+}
+.amos_tm_leftpart .menu{
+	width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+.amos_tm_leftpart .menu ul{
+	margin: 0px;
+    list-style-type: none;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.amos_tm_leftpart .menu ul li{
+	margin: 0px;
+	position: relative;
+}
+.amos_tm_leftpart .menu ul li:last-child:before{display: none;}
+.amos_tm_leftpart .menu ul li a{
+	text-decoration: none;
+	color: #000;
+	padding: 9px 0px;
+	display: inline-block;
+	font-family: "Montserrat";
+	font-weight: 500;
+	position: relative;
+	
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.amos_tm_leftpart .menu ul li a:after{
+	content: "";
+	position:absolute;
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0%;
+	height: 2px;
+	background-color: #2D5FFF;
+	z-index: -1;
+	
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.amos_tm_leftpart .menu ul li a:hover:after{width: 100%;}
+.amos_tm_leftpart .menu ul li a:hover{color: #2D5FFF;}
+.amos_tm_leftpart .copyright{
+	position: absolute;
+	bottom: 60px;
+	left: 60px;
+}
+.amos_tm_leftpart .copyright p{color: #000;}
+.amos_tm_leftpart .copyright p a{
+	text-decoration: none;
+	color: #2D5FFF;
+	border-bottom: 1px solid transparent;
+	
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.amos_tm_leftpart .copyright p a:hover{border-bottom-color: #2D5FFF;}
+
+/*---------------------------------------------------*/
+/*	 03. AMOS RIGHTPART
+/*---------------------------------------------------*/
+
+.amos_tm_rightpart{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	padding-left: 400px;
+}
+.amos_tm_rightpart .hero{
+	width: 100%;
+	height: 100vh;
+	float: left;
+	position: relative;
+	margin-bottom: 150px;
+	overflow: hidden;
+}
+.amos_tm_rightpart .hero .bg_image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.amos_tm_rightpart .hero .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+	background-color: rgba(255,255,255,0);
+}
+.amos_tm_rightpart .hero .container{height: 100%;}
+.amos_tm_rightpart .hero .content{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+.amos_tm_rightpart .hero .content .name{
+	font-size: 70px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.amos_tm_rightpart .hero .content .job{
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+.amos_tm_rightpart .hero .social ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.amos_tm_rightpart .hero .social ul li{
+	margin: 0px 5px 0px 0px;
+	display: inline-block;
+	text-align: center;
+}
+.amos_tm_rightpart .hero .social ul li a{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 46px;
+	border-radius: 100%;
+	background-color: #2D5FFF;
+	border: 2px solid #2D5FFF;
+	
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.amos_tm_rightpart .hero .social ul li a:hover{
+	background-color: transparent;
+	color: #000;
+}
+.amos_tm_arrow_wrap{
+	position: absolute;
+	left: auto;
+	bottom: 5%;
+	z-index: 55;
+}
+.amos_tm_arrow_wrap.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite; }
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px); } }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px); } }
+.amos_tm_arrow_wrap a{
+	text-decoration: none;
+	color: #000;
+	font-size: 30px;
+}
+
+/*---------------------------------------------------*/
+/*	 04. AMOS ABOUT
+/*---------------------------------------------------*/
+
+.amos_tm_about{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	margin-bottom: 180px;
+}
+.amos_tm_about .about_inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	display: flex;
+	align-items: center;
+}
+.amos_tm_about .about_inner .left{
+	width: 50%;
+	padding-right: 60px;
+}
+.amos_tm_about .about_inner .left .image{
+	position: relative;
+	float: left;
+}
+.amos_tm_about .about_inner .left .image:before{
+	position: absolute;
+	content: "";
+	top: 30px;
+	bottom: -30px;
+	left: 30px;
+	right: -30px;
+	background-color: #2D5FFF;
+}
+.amos_tm_about .about_inner .left .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.amos_tm_about .right{
+	width: 50%;
+	padding-left: 50px;
+}
+.mamer_title_holder{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 50px;
+}
+.mamer_title_holder h3{
+	font-weight: 700;
+	position: relative;
+}
+.mamer_title_holder h3:before{
+	position: absolute;
+	content: "";
+	width: 0px;
+	height: 5px;
+	background-color: #2D5FFF;
+	left: 0px;
+	bottom: -10px;
+	
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.mamer_title_holder.load h3:before{width: 80px;}
+.amos_tm_about .right .text{
+	width: 100%;
+	float: left;
+	margin-bottom: 12px;
+}
+.amos_tm_about .right .text p{margin-bottom: 20px;}
+.amos_tm_button{
+	width: 100%;
+	float: left;
+}
+.amos_tm_button a{
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	font-family: "Montserrat";
+	border: 2px solid #2D5FFF;
+	padding: 8px 40px 6px 40px;
+	background-color: #2D5FFF;
+	border-radius: 5px;
+	
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.amos_tm_button a:hover{
+	background-color: transparent;
+	color: #000;
+}
+
+/*---------------------------------------------------*/
+/*	 05. AMOS SERVICES
+/*---------------------------------------------------*/
+
+.amos_tm_service{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	background-color: #f9f9f9;
+	padding: 140px 0px 100px 0px;
+}
+.amos_tm_service .service_inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	display: flex;
+}
+.mamer_univ_title{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-bottom: 41px;
+}
+.mamer_univ_title .text{padding-bottom: 29px;}
+.amos_tm_service .service_inner .service_left{
+	width: 35%;
+	padding-right: 50px;
+}
+.amos_tm_service .service_inner .service_right{
+	width: 65%;
+	padding-left: 50px;
+}
+.amos_tm_service .service_inner .right{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.amos_tm_service .service_inner .right ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+}
+.amos_tm_service .service_inner .right ul li{
+	margin: 0px 0px 50px 0px;
+	float: left;
+	width: 50%;
+	padding-left: 50px;
+}
+.amos_tm_service .service_inner .right ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+	padding: 50px 40px 40px 50px;
+	border-radius: 5px;
+	
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.amos_tm_service .service_inner .right ul li .svg{
+	width: 40px;
+	height: 40px;
+	color: #2D5FFF;
+	margin-bottom: 21px;
+}
+.amos_tm_service .service_inner .right ul li .title{
+	font-size: 20px;
+	margin-bottom: 24px;
+}
+.amos_tm_service .service_inner .right ul li.active .svg{color: #fff;}
+.amos_tm_service .service_inner .right ul li.active .title{color: #fff;}
+.amos_tm_service .service_inner .right ul li.active .text{color: #eee;}
+.amos_tm_service .service_inner .right ul li.active .list_inner{background-color: #2D5FFF;}
+.amos_tm_service .service_inner .right ul li .list_inner:hover{background-color: #2D5FFF;}
+.amos_tm_service .service_inner .right ul li .list_inner:hover .svg{color: #fff;}
+.amos_tm_service .service_inner .right ul li .list_inner:hover .title{color: #fff;}
+.amos_tm_service .service_inner .right ul li .list_inner:hover .text{color: #eee;}
+
+/*---------------------------------------------------*/
+/*	 06. AMOS VIDEO PRESENTATION 
+/*---------------------------------------------------*/
+
+.amos_tm_video{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	background-color: #2D5FFF;
+	padding: 90px 0px;
+	margin-bottom: 150px;
+}
+.amos_tm_video .inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.amos_tm_video .inner .left h3{
+	color: #fff;
+	margin-bottom: 5px;
+}
+.amos_tm_video .inner .left p{color: #ccc;}
+.watch{
+	display: inline-block;
+    line-height: 40px;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+    padding-left: 55px;
+}
+.watch .play{
+	position: absolute;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+.watch .play:before{
+	position: absolute;
+	content: "";
+	border: 7px solid transparent;
+	border-left-color: #fff;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 16px;
+}
+.watch .play:after{
+	content: '';
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: 44px;
+    height: 44px;
+    background-color: inherit;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    border: 3px solid #fff;
+    border-radius: 100%;
+}
+.watch:hover .play:after{
+	opacity: 0;
+	-webkit-animation: cs_fn_pulse 2s cubic-bezier(0.3,1,0.3,1) infinite;
+    animation: cs_fn_pulse 2s cubic-bezier(0.3,1,0.3,1) infinite;
+	z-index: 1;
+}
+@-webkit-keyframes cs_fn_pulse{ from{ opacity:1;  transform:scale(1,1)}
+ to{ opacity:0;  transform:scale(1.8,1.8)}
+}
+@keyframes cs_fn_pulse{ from{ opacity:1;  transform:scale(1,1)}
+ to{ opacity:0;  transform:scale(1.8,1.8)}
+}
+.watch .text{
+	position: relative;
+    text-transform: uppercase;
+    color: #fff;
+    padding-left: 6px;
+    font-weight: 500;
+}
+.watch .full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 2;
+}
+
+/*---------------------------------------------------*/
+/*	 07. AMOS PORTFOLIO
+/*---------------------------------------------------*/
+
+.amos_tm_portfolio{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	margin-bottom: 100px;
+}
+.amos_tm_portfolio .inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	display: flex;
+}
+.amos_tm_portfolio .portfolio_left{
+	width: 65%;
+	padding-right: 50px;
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li{
+	margin: 0px 0px 50px 0px;
+	float: left;
+	width: 50%;
+	padding-left: 50px;
+	transition: transform 0.3s ease-in-out; /* Agrega un efecto de transición suave al desplazamiento */
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	position: relative;
+	overflow: hidden;  
+
+	
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li:hover{
+
+	transform: translateY(-5px); /* Desplaza la tarjeta hacia arriba 5px al pasar el ratón por encima */
+
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li .image{
+	position: relative;
+	float: left;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	overflow: hidden;
+	transition: transform 0.3s ease-in-out; /* Agrega un efecto de transición suave */
+
+
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li .list_inner:hover .image{
+
+
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li .image img{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li .detail{
+	width: 100%;
+	float: left;
+	background-color: #2D5FFF;
+	padding: 30px;
+	border-bottom-left-radius: 5px;
+	transition: transform 0.3s ease-in-out; /* Agrega un efecto de transición suave */
+
+	border-bottom-right-radius: 5px;
+}
+
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li .detail{
+	transform: translateY(-5px); /* Desplaza la tarjeta hacia arriba 5px al pasar el ratón por encima */
+
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li .detail h3{
+	font-size: 20px;
+	color: #fff;
+}
+.amos_tm_portfolio .portfolio_left .portfolio_list ul li .detail span{color: #eee;}
+.amos_tm_portfolio .full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+.amos_tm_portfolio .portfolio_right{
+	width: 35%;
+	padding-left: 50px;
+}
+
+/*---------------------------------------------------*/
+/*	 08. AMOS SKILLS
+/*---------------------------------------------------*/
+
+.amos_tm_skills{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #f9f9f9;
+	padding: 143px 0px 151px 0px;
+	margin-bottom: 143px;
+}
+.xender_tm_freelancer_title.another h3{color: #fff;}
+.xender_tm_freelancer_title.another p{color: #bbb;}
+
+.amos_tm_skills .skills_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+}
+.amos_tm_skills .skills_inner .skilla_title{
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 40px;
+}
+.amos_tm_skills .skills_inner .progress_inner{margin-bottom: 41px;}
+.amos_tm_skills .skills_inner .progress_inner:last-child{margin-bottom: 0px;}
+.amos_tm_skills .skills_inner .left{
+	width: 50%;
+	padding-right: 50px;
+}
+.amos_tm_skills .skills_inner .right{
+	width: 50%;
+	padding-left: 50px;
+}
+.mamer_progress{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 50px;
+}
+.amos_tm_skills .progress_inner{
+	width:100%;
+	margin-bottom:11px;
+}
+.amos_tm_skills .progress_inner > span{
+	margin:0px 0px 7px 0px;
+	width:100%;
+	display:block;
+	text-align:left;
+	color: #000;
+}
+.amos_tm_skills .progress_inner span.number{float: right;}
+.amos_tm_skills .progress_inner .background{
+	background:rgba(0,0,0,.2);;
+	width:100%;
+	min-width:100%;
+	position:relative;
+	height:8px;
+}
+.amos_tm_skills .progress_inner .background .bar_in{
+	height:100%;
+	background:#333;
+	width:0px;
+	overflow:hidden;
+}
+.amos_tm_skills .progress_inner .background .bar{
+	width:0px;
+	height:100%;
+}
+.amos_tm_skills .progress_inner .background .bar.open{
+	-webkit-animation: wow 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Safari 4+ */
+	-moz-animation:    wow 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Fx 5+ */
+	animation:         wow 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
+	width:100%;	
+}
+
+@-webkit-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+@-moz-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+@keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+
+/*---------------------------------------------------*/
+/*	 09. AMOS NEWS
+/*---------------------------------------------------*/
+
+.amos_tm_news{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	margin-bottom: 100px;
+}
+.amos_tm_news .inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	display: flex;
+}
+.amos_tm_news .news_left{
+	width: 35%;
+	padding-right: 50px;
+}
+.amos_tm_news .news_right{
+	width: 65%;
+	padding-left: 50px;
+}
+.amos_tm_news .news_right .news_list{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+}
+.amos_tm_news .news_right .news_list ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+}
+.amos_tm_news .news_right .news_list ul li{
+	margin: 0px 0px 50px 0px;
+	float: left;
+	width: 50%;
+	padding-left: 50px;
+}
+.amos_tm_news .news_right .news_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	position: relative;
+}
+.amos_tm_news .news_right .news_list ul li .image{
+	position: relative;
+	float: left;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.amos_tm_news .news_right .news_list ul li .image img{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.amos_tm_news .news_right .news_list ul li .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.amos_tm_news .news_right .news_list ul li .full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+.amos_tm_news .news_right .news_list .detail{
+	width: 100%;
+	float: left;
+	background-color: #2D5FFF;
+	padding: 30px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.amos_tm_news .news_right .news_list .detail .date{display: none;}
+.amos_tm_news .news_right .news_list .detail .date a{
+	text-decoration: none;
+	color: #2D5FFF;
+}
+.amos_tm_news .news_right .news_list .detail .title{font-size: 20px;}
+.amos_tm_news .news_right .news_list .detail .title a{
+	text-decoration: none;
+	color: #fff;
+	
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/*---------------------------------------------------*/
+/*	 10. AMOS PARTNERS
+/*---------------------------------------------------*/
+
+.amos_tm_partners{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	background-color: #2D5FFF;
+	padding: 65px 0px;
+	margin-bottom: 140px;
+}
+.amos_tm_partners .partner_inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+}
+.amos_tm_partners .partner_inner ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.amos_tm_partners .partner_inner ul li{
+	margin: 0px;
+	text-align: center;
+}
+
+/*---------------------------------------------------*/
+/*	 11. AMOS CONTACT
+/*---------------------------------------------------*/
+
+.amos_tm_contact{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	margin-bottom: 70px;
+}
+.amos_tm_contact .contact_inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	display: flex;
+}
+.amos_tm_contact .contact_left{
+	width: 35%;
+	padding-right: 50px;
+}
+.amos_tm_contact .about_short_contact_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 19px;
+}
+.amos_tm_contact .about_short_contact_wrap ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.amos_tm_contact .about_short_contact_wrap ul li{
+	margin: 0px 0px 10px 0px;
+	width: 100%;
+	float: left;
+	position: relative;
+	padding-left: 30px;
+}
+.amos_tm_contact .about_short_contact_wrap ul li:nth-of-type(2n){clear: right;}
+.amos_tm_contact .about_short_contact_wrap ul li label{
+	font-weight: 500;
+	color: #000;
+	min-width: 85px;
+	display: inline-block;
+}
+.amos_tm_contact .about_short_contact_wrap ul li a{
+	text-decoration: none;
+	color: #2D5FFF;
+    position: relative;
+	border-bottom: 1px solid transparent;
+	
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.amos_tm_contact .about_short_contact_wrap ul li a:hover{border-bottom-color: #2D5FFF;}
+.amos_tm_contact .about_short_contact_wrap ul li .svg{
+	position: absolute;
+	left: 0px;
+	top: 6px;
+	width: 17px;
+	height: 17px;
+	color: #2D5FFF;
+}
+.amos_tm_contact .right{
+	width: 65%;
+	padding-left: 50px;
+}
+.amos_tm_contact .right .input_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.amos_tm_contact .right .input_wrap ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.amos_tm_contact .right .input_wrap ul li{
+	margin: 0px 0px 25px 0px;
+	width: 100%;
+	float:left; 
+	border: 1px solid #6f6f6f;
+}
+.amos_tm_contact .right .input_wrap ul li input{
+	width: 100%;
+	background-color: transparent;
+	border: none;
+}
+.amos_tm_contact .right .input_wrap ul li input:focus{outline: none;}
+.amos_tm_contact .right .input_wrap ul li textarea{
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	height: 44px !important;
+	resize: none;
+}
+.amos_tm_contact .right .input_wrap ul li textarea:focus{outline: none;}
+.amos_tm_contact .empty_notice{
+	color: #F52225;
+	margin-bottom: 7px;
+	display: none;
+	text-align: left;
+	font-weight: 500;
+}
+.amos_tm_contact .contact_error{
+	color: #F52225;
+	text-align: left;
+	font-weight: 500;
+}
+.amos_tm_contact .returnmessage{
+	color:#3A00FF;
+	margin-bottom: 7px;
+	text-align: left;
+	font-weight: 500;
+}
+
+/*---------------------------------------------------*/
+/*	 12. AMOS FOOTER
+/*---------------------------------------------------*/
+
+.amos_tm_footer{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	background-color: #2D5FFF;
+	padding: 61px 0px;
+}
+.amos_tm_footer .inner{
+	width: 100%;
+	height: auto;
+	clear:both;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.amos_tm_footer .inner .logo img{
+	max-width: 100px;
+	max-height: 100px;
+}
+.amos_tm_footer .inner .social ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.amos_tm_footer .inner .social ul li{
+	margin: 0px 15px 0px 0px;
+	display: inline-block;
+	text-align: center;
+}
+.amos_tm_footer .inner .social ul li a{
+	text-decoration: none;
+	color: #fff;
+	
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/*---------------------------------------------------*/
+/*	 13. AMOS GLITCH DEMO
+/*---------------------------------------------------*/
+
+.glitch{
+	position: absolute;
+ 	width: 100%;
+ 	height: 100%;
+	top: 0;
+ 	left: 0;
+	background-image: url("..//img/slider/3.jpg");
+	background-size: cover;
+	-webkit-background-size: cover;
+	background-position: center;
+	z-index: -1 !important;
+	opacity: 1;
+	transform: scale(1);
+}
+.glitch:before{
+	content: "";
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+/*---------------------------------------------------*/
+/*	 14. AMOS WATER DEMO
+/*---------------------------------------------------*/
+
+.amos_tm_rightpart .hero.ripple{
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: url("..//img/slider/3.jpg");
+	position: relative;
+	z-index: 4;
+}
+
+/*---------------------------------------------------*/
+/*	 15. AMOS PARTICLE DEMO
+/*---------------------------------------------------*/
+
+#particles-js {
+	width: 100%;
+	height: 100vh;
+  	position: relative;
+  	z-index: 2;
+}
+.amos_tm_rightpart .hero .content.particle{z-index: 3;}
+.amos_tm_rightpart .hero .container.particle{position: static;}
+
+/*---------------------------------------------------*/
+/*	 16. AMOS VIDEO DEMO
+/*---------------------------------------------------*/
+
+.amos_tm_rightpart .hero.video .overlay{background-color: rgba(0,0,0,.6);}
+.amos_tm_rightpart .hero.video .content .name{color: #fff;}
+.amos_tm_rightpart .hero.video .content .job{color: #eee;}
+.amos_tm_rightpart .hero.video .social ul li a:hover{color: #fff;}
+.amos_tm_arrow_wrap.video a{color: #fff;}
+
+/*---------------------------------------------------*/
+/*	 17. AMOS RTL DEMO
+/*---------------------------------------------------*/
+
+body.rtl {direction: rtl;}
+body.rtl .amos_tm_leftpart .menu ul li{float: right;}
+body.rtl .amos_tm_leftpart .leftpart_inner .logo{float: right;}
+body.rtl .amos_tm_leftpart .copyright{
+	left: auto;
+	right: 60px;
+}
+body.rtl .amos_tm_rightpart .hero .social ul li{float: right;}
+body.rtl .amos_tm_about .about_inner .left{
+	padding-right: 0px;
+	padding-left: 60px;
+}
+body.rtl .amos_tm_about .right{
+	padding-left: auto;
+	padding-right: 50px;
+}
+body.rtl .amos_tm_about .about_inner .left .image:before{
+    bottom: -30px;
+    left: -30px;
+    right: 30px;
+}
+body.rtl .mamer_title_holder h3:before{
+	left: auto;
+	right: 0px;
+}
+body.rtl .amos_tm_service .service_inner .service_right{
+	padding-right: 50px;
+	padding-left: 0px;
+}
+body.rtl .amos_tm_service .service_inner .service_left{
+	padding-left: 50px;
+	padding-right: 0px;
+}
+body.rtl .amos_tm_service .service_inner .right ul li{float: right;}
+body.rtl .amos_tm_portfolio .portfolio_left{
+	padding-right: 0px;
+	padding-left: 50px;
+}
+body.rtl .amos_tm_portfolio .portfolio_right{
+	padding-left: 0px;
+	padding-right: 50px;
+}
+body.rtl .amos_tm_portfolio .portfolio_left .portfolio_list ul li{float: right;}
+body.rtl .amos_tm_skills .skills_inner .right{
+	padding-left: 0px;
+	padding-right: 50px;
+}
+body.rtl .amos_tm_skills .skills_inner .left{
+	padding-left: 50px;
+	padding-right: 0px;
+}
+body.rtl .amos_tm_news .news_right{
+	padding-left: 0px;
+	padding-right: 50px;
+}
+body.rtl .amos_tm_news .news_left{
+	padding-left: 50px;
+	padding-right: 0px;
+}
+body.rtl .amos_tm_news .news_right .news_list ul li{float: right;}
+body.rtl .amos_tm_contact .contact_left{
+	padding-left: 50px;
+	padding-right: 0px;
+}
+body.rtl .amos_tm_contact .right{
+	padding-left: 0px;
+	padding-right: 50px;
+}
+body.rtl .amos_tm_contact .about_short_contact_wrap ul li{
+	padding-left: 0px;
+	padding-right: 30px;
+	float: right;
+}
+body.rtl .amos_tm_contact .about_short_contact_wrap ul li .svg{
+	left: auto;
+	right: 0px;
+}
+
+.progressbar{
+    position: fixed;
+	height: 100px;
+    width: 1px;
+	bottom: 25px;
+    right: -25px;
+    background-color: rgba(0,0,0,.08);
+    z-index: 10;
+    transition: all .3s ease;
+}
+.progressbar.animate{
+	right: 25px;
+}
+
+.progressbar .line {
+	position: absolute;
+    width: 1px;
+	height: auto;
+    background-color: rgba(0,0,0,.4);
+}
+
+.progressbar .text{
+	position: absolute;
+	top: -77%;
+    left: 0px;
+	font-size: 13px;
+    transform: rotateZ(90deg);
+	text-transform: uppercase;
+    transform-origin: left;
+	white-space: nowrap;
+}
+.progressbar a{
+	text-decoration: none;
+	color: #000;
+}
+
+body.dark{
+	background-color: #000;
+	color: #ddd;
+}
+body.dark h3{
+	color: #fff;
+}
+body.dark .amos_tm_leftpart{
+	background-color: #121212;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+}
+body.dark .amos_tm_leftpart .menu ul li a{
+	color: #fff;
+}
+body.dark .amos_tm_leftpart .menu ul li a:hover{color: #2D5FFF;}
+body.dark .amos_tm_leftpart .copyright p{color: #fff;}
+body.dark .amos_tm_leftpart .copyright p a{color: #fff;}
+body.dark .amos_tm_leftpart .copyright p a:hover{border-bottom-color: #fff;}
+body.dark .amos_tm_rightpart .hero .social ul li a:hover{color: #fff;}
+body.dark .amos_tm_button a:hover{color: #fff;}
+body.dark .amos_tm_service{background-color: #121212;}
+body.dark .amos_tm_service .service_inner .right ul li .list_inner{
+	background-color: #000;
+	box-shadow: 0px 0px 10px rgba(255,255,255,.05);
+}
+body.dark .amos_tm_service .service_inner .right ul li.active .list_inner{
+	background-color: #2D5FFF;
+}
+body.dark .amos_tm_service .service_inner .right ul li .list_inner:hover{background-color: #2D5FFF;}
+body.dark .amos_tm_portfolio .portfolio_left .portfolio_list ul li .detail{background-color: #2D5FFF;}
+body.dark .amos_tm_skills{background-color: #121212;}
+body.dark .amos_tm_skills .progress_inner > span{color: #fff;}
+body.dark .amos_tm_skills .progress_inner .background{background-color: rgba(255,255,255,.2);}
+body.dark .amos_tm_news .news_right .news_list .detail{background-color:#2D5FFF ;}
+body.dark .amos_tm_news .news_right .news_list .detail .title a{color:#fff ;}
+body.dark .amos_tm_news .news_right .news_list .detail .date a{color:#fff ;}
+body.dark .amos_tm_contact .about_short_contact_wrap ul li label{color:#fff ;}
+body.dark .amos_tm_contact .right .input_wrap ul li input{color:#fff ;}
+body.dark .amos_tm_contact .right .input_wrap ul li textarea{color:#fff ;}
+body.dark .amos_tm_partners{background-color:#121212;}
+body.dark .amos_tm_footer{background-color:#121212;}
+body.dark .amos_tm_footer{background-color:#121212;}
+
+
+/*---------------------------------------------------*/
+/*	 18. AMOS MEDIA QUERIES (FOR SMALL DEVIVES)
+/*---------------------------------------------------*/
+
+@media (max-width: 1200px) {
+	.amos_tm_mobile_menu{display: block;}
+	.amos_tm_leftpart{display: none;}
+	.amos_tm_rightpart{padding-left: 0px;}
+}
+@media (max-width: 1040px) {
+	.amos_tm_about .about_inner{flex-direction: column;align-items: baseline;}
+	.amos_tm_about .about_inner .left{width: 100%;padding-right: 0px;margin-bottom: 100px;}
+	.amos_tm_about .right{width: 100%;padding-left: 0px;}
+	.amos_tm_service .service_inner{flex-direction: column;align-items: baseline;}
+	.amos_tm_service .service_inner .service_left{padding-right: 0px;width: 100%;}
+	.amos_tm_service .service_inner .service_right{padding-left: 0px;width: 100%;}
+	.amos_tm_video .inner{flex-direction: column;align-items: baseline;}
+	.amos_tm_video .inner .left{margin-bottom: 20px;}
+	.amos_tm_portfolio .inner{flex-direction: column;}
+	.amos_tm_portfolio .portfolio_left{width: 100%;padding-right: 0px;float: right;}
+	.amos_tm_portfolio .portfolio_right{width: 100%;padding-left: 0px;float: left;}
+	.amos_tm_skills .skills_inner{flex-direction: column;}
+	.amos_tm_skills .skills_inner .left{padding-right: 0px;width: 100%;margin-bottom: 100px;}
+	.amos_tm_skills .skills_inner .right{padding-left: 0px;width: 100%;}
+	.amos_tm_news .inner{flex-direction: column;}
+	.amos_tm_news .news_left{padding-right: 0px;width: 100%;}
+	.amos_tm_news .news_right{padding-left: 0px;width: 100%;}
+	.amos_tm_contact .contact_inner{flex-direction: column;}
+	.amos_tm_contact .contact_left{width: 100%;padding-right: 0px;}
+	.amos_tm_contact .right{padding-left: 0px;width: 100%;}
+	.mamer_univ_title{padding-bottom: 100px;}
+	.amos_tm_portfolio .mamer_univ_title{padding-bottom: 0px;}
+	body.rtl .amos_tm_about .right{padding-right: 0px;}
+	body.rtl .amos_tm_service .service_inner .service_right{padding-right: 0px;}
+	body.rtl .amos_tm_portfolio .portfolio_right{padding-right: 0px;}
+	body.rtl .amos_tm_skills .skills_inner .left{padding-left: 0px;}
+	body.rtl .amos_tm_skills .skills_inner .right{padding-right: 0px;}
+	body.rtl .amos_tm_news .news_right{padding-right: 0px;}
+	body.rtl .amos_tm_contact .right{padding-right: 0px;}
+	body.rtl .amos_tm_footer .inner .social ul li{float: right;}
+	.amos_tm_preloader{display: none;}
+}
+@media (max-width: 768px) {
+	.amos_tm_rightpart .hero .content .name{font-size: 50px;}
+	.amos_tm_service .service_inner .right ul li{width: 100%;padding-left: 0px;}
+	.amos_tm_service .service_inner .right ul{margin: 0px;}
+	.amos_tm_portfolio .portfolio_left .portfolio_list ul li{width: 100%;padding-left: 0px;}
+	.amos_tm_portfolio .portfolio_left .portfolio_list ul{margin: 0px;}
+	.amos_tm_news .news_right .news_list ul li{width: 100%;padding-left: 0px;}
+	.amos_tm_news .news_right .news_list ul{margin: 0px;}
+	.amos_tm_intro_mainpart .main_list ul li{width: 100%;padding-left: 0px;margin-bottom: 30px;}
+	.amos_tm_intro_mainpart .main_list ul{margin: 0px;}
+}	
