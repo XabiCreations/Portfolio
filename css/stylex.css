@@ -176,8 +176,7 @@ img.svg{
 .amos_tm_mobile_menu .my_trigger{
 	line-height: 1;
 	position: relative;
-	right: -10px; 
-}
+margin-right: 18px;}
 .amos_tm_mobile_menu .mobile_menu_inner{
 	width: 100%;
 	height: auto;
@@ -466,7 +465,7 @@ img.svg{
 	height: auto;
 	clear:both;
 	float: left;
-	margin-bottom: 180px;
+	margin-bottom: 80px;
 }
 .amos_tm_about .about_inner{
 	width: 100%;
@@ -753,6 +752,7 @@ img.svg{
 /*---------------------------------------------------*/
 
 .amos_tm_portfolio{
+	padding-top: 64px;
 	width: 100%;
 	height: auto;
 	clear:both;
@@ -1493,9 +1493,9 @@ body.dark .amos_tm_footer{background-color:#121212;}
 	.amos_tm_service .service_inner .service_right{padding-left: 0px;width: 100%;}
 	.amos_tm_video .inner{flex-direction: column;align-items: baseline;}
 	.amos_tm_video .inner .left{margin-bottom: 20px;}
-	.amos_tm_portfolio .inner{flex-direction: column;}
+	.amos_tm_portfolio .inner{flex-direction: column-reverse;}
 	.amos_tm_portfolio .portfolio_left{width: 100%;padding-right: 0px;float: right;}
-	.amos_tm_portfolio .portfolio_right{width: 100%;padding-left: 0px;float: left;}
+	.amos_tm_portfolio .portfolio_right{width: 100%;padding-left: 0px;float: left; margin-bottom: 64px;}
 	.amos_tm_skills .skills_inner{flex-direction: column;}
 	.amos_tm_skills .skills_inner .left{padding-right: 0px;width: 100%;margin-bottom: 100px;}
 	.amos_tm_skills .skills_inner .right{padding-left: 0px;width: 100%;}
@@ -1507,7 +1507,7 @@ body.dark .amos_tm_footer{background-color:#121212;}
 	.amos_tm_contact .right{padding-left: 0px;width: 100%;}
 	.mamer_univ_title{padding-bottom: 100px;}
 	.amos_tm_portfolio .mamer_univ_title{padding-bottom: 0px;}
-	body.rtl .amos_tm_about .right{padding-right: 0px;}
+	body.rtl .amos_tm_about .right{padding-right: 0px; }
 	body.rtl .amos_tm_service .service_inner .service_right{padding-right: 0px;}
 	body.rtl .amos_tm_portfolio .portfolio_right{padding-right: 0px;}
 	body.rtl .amos_tm_skills .skills_inner .left{padding-left: 0px;}
